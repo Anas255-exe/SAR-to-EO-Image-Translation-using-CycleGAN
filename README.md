@@ -90,30 +90,50 @@ This will:
 Leave space below to paste or link your visuals:
 
 1. **Figure 1. SAR → EO Example (Before / After)**  
-   _Description:_ Show one SAR input band (VV or composite), the real EO RGB, and the generated EO RGB side-by-side.  
+   
+<img width="1755" height="739" alt="image" src="https://github.com/user-attachments/assets/d84c704e-7044-426b-94b8-1d3457510c3d" />
 
 
 
-  <img width="2076" height="745" alt="image" src="https://github.com/user-attachments/assets/f3b62ba1-9ee5-4393-a8eb-276d6ed7fd2a" />
+
+  
 
 2. **Figure 2. Additional Examples**  
 3. **Figure 3. Quantitative Metrics Over Samples**  
-   _Description:_ A table or bar chart showing SSIM and PSNR for each selected sample.  
-   | Sample ID | SSIM  | PSNR  |
-   |-----------|-------|-------|
-   | sample_001| 0.76  | 19.2 dB |
-   | sample_042| 0.81  | 20.5 dB |
-   | …         | …     | …      |
+
+### 📊 Evaluation Metrics (after 30 epochs)
+
+| Sample             | SSIM   | PSNR   | NDVI  |
+|-------------------:|:------:|:------:|:-----:|
+| sample_0000.pt     | 0.7110 | 24.58  | 0.5067 |
+| sample_0001.pt     | 0.6143 | 17.03  | 0.4683 |
+| sample_0002.pt     | 0.7328 | 26.68  | 0.4780 |
+| sample_0003.pt     | 0.6836 | 21.49  | 0.5638 |
+| sample_0004.pt     | 0.6749 | 26.36  | 0.5649 |
+| sample_0005.pt     | 0.7644 | 25.68  | 0.5153 |
+| sample_0006.pt     | 0.7750 | 26.93  | 0.5481 |
+| sample_0007.pt     | 0.6369 | 19.69  | 0.5864 |
+| sample_0008.pt     | 0.6452 | 19.65  | 0.6178 |
+| sample_0009.pt     | 0.7290 | 21.83  | 0.6507 |
+| sample_0010.pt     | 0.7109 | 22.55  | 0.6260 |
+
+✅ **Overall Performance:**
+- **Average SSIM:** 0.6980
+- **Average PSNR:** 22.95 dB
+- **Average NDVI:** 0.5569
+
 
 4. **Figure 4. Training Curves **  
-   _Description:_ Plot of generator and discriminator losses vs. epochs, as well as SSIM/PSNR on the validation set over time.  
-   ![Figure 4: placeholder](checkpoints/training_curves.png)  
+  <img width="1108" height="834" alt="image" src="https://github.com/user-attachments/assets/8b11b8a6-cc6d-480b-950b-daad6bf699c3" />
+  <img width="1147" height="908" alt="image" src="https://github.com/user-attachments/assets/da1a4308-2736-40ae-81c3-e477750e7ee2" />
+
+
 
 ---
 
 ## 7. Key Findings & Observations  
 - Normalizing each channel independently to [–1,1] stabilized training.  
-- Achieved average SSIM ≈ 0.78 and PSNR ≈ 20 dB on RGB.  
+- Achieved average SSIM ≈ 0.69 and PSNR ≈ 22.95 dB on RGB.  
 - Failure modes: difficulty reconstructing fine texture in heavily vegetated zones.  
 
 ---
@@ -137,6 +157,6 @@ Leave space below to paste or link your visuals:
 ## 10. How to Reproduce  
 1. Ensure data in `data/raw/`  
 2. Install requirements and follow Sections 4–6 above  
-3. Inspect `config.yaml` for all path and hyperparameter settings  
+
 
 ---
