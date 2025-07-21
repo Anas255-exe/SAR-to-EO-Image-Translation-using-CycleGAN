@@ -3,7 +3,7 @@
 # Project 1: SAR → EO Image Translation Using CycleGAN
 
 ## Team Members  
-- **Gurmehar** (23/CS/168)  
+- **Gurmehar** (23/CS/162)  
 - **Mohammad Anas**  (23/CS/255)  
 
 ---
