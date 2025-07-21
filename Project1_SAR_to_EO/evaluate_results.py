@@ -7,9 +7,9 @@ import numpy as np
 
 # ---------------- Config ----------------
 class Config:
-    checkpoint_path = '/workspaces/SAR-to-EO-Image-Translation-using-CycleGAN/Project1_SAR_to_EO/checkpoints/G_epoch29.pt'
+    checkpoint_path = '/Project1_SAR_to_EO/checkpoints/G_epoch29.pt'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    test_data_dir = '/workspaces/SAR-to-EO-Image-Translation-using-CycleGAN/Project1_SAR_to_EO/Data/Preprocessed'   # folder containing sample .pt files with {'A': SAR, 'B': EO}
+    test_data_dir = 'Project1_SAR_to_EO/Data/Preprocessed'   # folder containing sample .pt files with {'A': SAR, 'B': EO}
     output_dir = 'eval_outputs_last'
 
 cfg = Config()
